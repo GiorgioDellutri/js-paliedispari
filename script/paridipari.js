@@ -9,27 +9,27 @@ let even = ('pari')
 let odd = ('dispari')
 let userNumber;
 let pcNumber = getRandomNumber(1,5);
-let userChoice = prompt('Pari o Dispari');
+let userChoice = prompt('Pari o Dispari');  //Chiedo all'utente pari o dispari
 
 do{
-    userNumber = parseInt(prompt("Inserisci un numero compreso tra 1 e 5"));
+    userNumber = parseInt(prompt("Inserisci un numero compreso tra 1 e 5")); // Chiedo all'utente un numero da 1 a 5 finche non e' corretto
 }
 while ( (userNumber < 1) || (userNumber > 5) ){
 }
 
-console.log(`Hai scelto ${userChoice}`);
+console.log(`Hai scelto ${userChoice}`); // Scelta pari o dispari dell'utente
 
-console.log(`Il tuo numero:  ${userNumber}`);
+console.log(`Il tuo numero:  ${userNumber}`); // Scelta numero dell'utente
 
-function getRandomNumber (nMin, nMax){
-    const randomNumber = Math.floor(Math.random() * (nMax - nMin + 1) + nMin);
+function getRandomNumber (nMin, nMax){   
+    const randomNumber = Math.floor(Math.random() * (nMax - nMin + 1) + nMin); // Genero un numero casuale per il computer
     return randomNumber;
 }
-console.log(`Il numero del computer:  ${pcNumber}`);
+console.log(`Il numero del computer:  ${pcNumber}`); // Visualizzo Numero del computer
 
-let sum = userNumber + pcNumber;
+let sum = userNumber + pcNumber;  // Calcolo la somma dei due numero (numeroUtente + numeroComputer)
 
-console.log(`La somma dei due numeri è:  ${sum}`);
+console.log(`La somma dei due numeri è:  ${sum}`); // Visualizzo la somma
 
 if (sum % 2 == 0){
     console.log("E' uscito pari");
