@@ -5,14 +5,30 @@
 let parolaUtente = prompt("Inserisci una parola");
 let array = [];
 
-console.log(parolaUtente)
+console.log(parolaUtente);
 
-for (let i = 0; i < parolaUtente.length; i++){ 
-
+for ( let i = 0; i < parolaUtente.length; i++){ 
     array[i] = parolaUtente.charAt(i);
 }   
+console.log(array);
 
-console.log(array)
+let arrayInverso = array.reverse();
+console.log(arrayInverso);
+
+for (let i = 0; i < array.length; i++){
+
+    if (array[i] == arrayInverso[i]){
+        console.log("La parola non e' palindroma");
+    } else{
+        console.log("La parola e' palindroma");
+    }
+    
+}
+
+
+
+
+
 
 
 
