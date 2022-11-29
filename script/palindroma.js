@@ -18,7 +18,6 @@ if (esito){
 
 function isPalindrome(parola) {
     let test = true;
-
     for (let i = 0; i < parola.length; i++){
         if (parola[i] != parola[parola.length - 1 -i]){
             test = false;
