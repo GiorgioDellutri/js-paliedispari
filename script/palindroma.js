@@ -8,27 +8,22 @@
 * Quindi ad esempio charAt(0) restituisce il primo carattere, mentre charAt(1) restituisce il secondo e così via */
 
 let parolaUtente = prompt("Inserisci una parola");
+let esito = isPalindrome(parolaUtente);
 
-// function palindroma(){
-    let array = [];
-    
-    console.log(parolaUtente);
-    
-    for ( let i = 0; i < parolaUtente.length; i++){ 
-        array[i] = parolaUtente.charAt(i);
-    }   
-    console.log(array);
-    
-    let arrayInverso = array.reverse();
-    console.log(arrayInverso);
-    
-    for (let i = 0; i < array.length; i++){
-    
-        if (array[i] != arrayInverso[arrayInverso.length -1 - i]){
-            console.log("La parola non è palindroma");
-        } else{
-            console.log("La parola è palindroma");
+if (esito){
+    console.log("La parola è palindroma");
+} else{
+    console.log("La parola non è palindroma");
+}
+
+function isPalindrome(parola) {
+    let test = true;
+
+    for (let i = 0; i < parola.length; i++){
+        if (parola[i] != parola[parola.length - 1 -i]){
+            test = false;
         }
     }
-    // return palindroma();
-// }
+    // console.log(test);
+    return test;
+}
